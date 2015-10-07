@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+            id="com.example.plugin"
+            version="0.0.1">        
+      <name>Cordova Plugin</name> 
+
+      <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+      </engines> 
+
+      <js-module src="www/MycustomPlugin.js" name="CustomPlugin">
+        <clobbers target="window.MycustomPlugin" />
+      </js-module>    
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+           <feature name="CustomPlugin">
+              <param name="android-package" value="com.example.myplugin.CustomPlugin"/>
+           </feature>
+        </config-file>
+
+       <source-file src="src/android/CustomPlugin.java" target-dir="src/com/example/myplugin"/>     
+
+   </platform>
