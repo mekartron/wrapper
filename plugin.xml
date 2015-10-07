@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
     <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-            id="com.example.myplugin"
+            id="com.example.plugin"
             version="0.0.1">        
       <name>Cordova Plugin</name> 
 
@@ -22,3 +22,4 @@
        <source-file src="src/android/CustomPlugin.java" target-dir="src/com/example/myplugin"/>     
 
    </platform>
+</plugin>
